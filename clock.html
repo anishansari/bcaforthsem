@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        #clock {
+
+            text-align: right;
+            border: 3px solid green;
+            margin-top: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Demo of Date Objct</h1>
+    <div id="clock"></div>
+
+
+    <script type="text/javascript">
+
+        let reg = /again/g
+        // console.log(str.source);
+        // var result = str.exec("H")
+        let obj = reg.exec("Hello BCA,we are fourth sem, Hello again here");
+        let obj1 = reg.exec("Hello BCA, we are fourth sem, Hello again here");
+        let obj2 = reg.test("Hello BCA, we are fourth sem, Hello again here, Hello again and again");
+        // let testObj = reg.test("hello BCA, we are fourth sem, Hello again here");
+        // console.log(obj);
+        // console.log(obj1); 
+        console.log(obj2.lastIndexOf);
+        console.log(reg.source);
+
+        function Clock() {
+            var date = new Date();
+            document.getElementById('clock').innerHTML = date;
+            setTimeout(Clock, 1000);
+        }
+        Clock();
+    </script>
+</body>
+
+</html>

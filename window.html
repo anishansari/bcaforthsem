@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="textInput" value="Hello">
+    <br><br>
+    <button type="button" onclick="confirm()">open</button>
+    <button type="button" onclick="closeOpenedWindow()">resze</button>
+
+    <!-- <button type="button" onclick="stopInterval()">Stop Interval</button> -->
+    <button onclick="window.print()">Print this page</button>
+
+    <script type="text/javascript">
+
+        //Alert
+        // alert('Hello Guys!');
+
+        //Blur
+        function focusOn() {
+            document.getElementById('textInput').focus();
+        }
+        function blurFocus() {
+            document.getElementById('textInput').blur();
+        }
+
+        // increament();
+
+        var openedWindow;
+
+        function openWindow() {
+            openedWindow = window.open('https://google.com');
+        }
+
+        function closeOpenedWindow() {
+            openedWindow.close();
+        }
+
+        function show_popup() {
+            var pop = window.createPopup()
+            var popbody = pop.document.body
+            popbody.style.backgroundColor = "lime"
+            popbody.style.border = "solid black 1px"
+            popbody.innerHTML =
+                "I am the pop-up, Click outside to close."
+            pop.show(150, 150, 200, 50, document.body)
+        }
+        function budge() {
+            moveBy(10, -10);
+        }
+
+
+        // Create resizable window
+        myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+
+        // Resize window to 500x500
+        myExternalWindow.resizeTo(500, 500);
+
+        // Make window relatively smaller to 400x400
+        myExternalWindow.resizeBy(-100, -100);
+
+
+
+
+    </script>
+</body>
+
+</html>
